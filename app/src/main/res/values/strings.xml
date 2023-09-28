@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Avaliacao_1_Amadeu</string>
+    <string name="insira_um_novo_texto">Insira um novo texto</string>
+    <string name="close_activity">Close Activity</string>
+    <string name="insira_um_texto_para_ser_exibido_na_lista">Insira um texto para ser exibido na lista</string>
+    <string name="vermelho">Vermelho</string>
+    <string name="azul">Azul</string>
+    <string name="verde">Verde</string>
+    <string name="selecione_uma_cor">Selecione uma cor:</string>
+    <string name="texto_a_exibir">Texto a exibir:</string>
+    <string name="limpar">Limpar</string>
+    <string name="inserir">Inserir</string>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_InputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/texto_a_exibir"
+        app:layout_constraintStart_toStartOf="@+id/iv_CloseButton"
+        app:layout_constraintTop_toBottomOf="@+id/iv_CloseButton" />
+
+    <ImageView
+        android:id="@+id/iv_CloseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/close_activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="ImageContrastCheck" />
+
+    <EditText
+        android:id="@+id/et_InputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/insira_um_texto_para_ser_exibido_na_lista"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLength="100"
+        android:maxLines="2"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_InputText"
+        app:layout_constraintTop_toBottomOf="@+id/tv_InputText"
+        tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_SelectColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/selecione_uma_cor"
+        app:layout_constraintStart_toStartOf="@+id/iv_CloseButton"
+        app:layout_constraintTop_toBottomOf="@+id/et_InputText" />
+
+    <RadioGroup
+        android:id="@+id/rg_Color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/iv_CloseButton"
+        app:layout_constraintTop_toBottomOf="@id/tv_SelectColor">
+
+
+        <RadioButton
+            android:id="@+id/rd_Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/vermelho" />
+
+        <RadioButton
+            android:id="@+id/rd_Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/verde" />
+
+        <RadioButton
+            android:id="@+id/rd_Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/azul" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_Clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bt_Register"
+        android:layout_margin="4dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/bt_Register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/inserir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_Clear"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="4dp">
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
