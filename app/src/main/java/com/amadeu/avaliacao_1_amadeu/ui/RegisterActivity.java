@@ -6,8 +6,8 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -23,6 +23,9 @@ public class RegisterActivity extends AppCompatActivity {
     private RadioGroup rg_corSelecionada;
     private Button bt_Register;
     private Button bt_clear;
+    private RadioButton rb_Green;
+    private RadioButton rb_Red;
+    private RadioButton rb_Blue;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class RegisterActivity extends AppCompatActivity {
         rg_corSelecionada = findViewById(R.id.rg_Color);
         bt_Register = findViewById(R.id.bt_Register);
         bt_clear = findViewById(R.id.bt_Clear);
+        rb_Green = findViewById(R.id.rd_Green);
+        rb_Blue = findViewById(R.id.rd_Blue);
+        rb_Red = findViewById(R.id.rd_Red);
     }
 
     private void setupListeners(){
@@ -57,18 +63,15 @@ public class RegisterActivity extends AppCompatActivity {
             int corSelecionada = -1;
 
             int idRadioSelected = rg_corSelecionada.getCheckedRadioButtonId();
-            // Foi usado o logcat par conseguir obter o valor do id de cada button para poder fazer as operações
-            // Porque não estava conseguindo fazer;
-            switch (idRadioSelected){
-                case 2131231224:
-                    corSelecionada = R.color.red;
-                    break;
-                case 2131231223:
-                    corSelecionada = R.color.green;
-                    break;
-                case 2131231222:
-                    corSelecionada = R.color.blue;
-                    break;
+
+            Log.d("ID Radio ->", String.valueOf(idRadioSelected));
+
+            if (idRadioSelected == rb_Red.getId()){
+                corSelecionada = R.color.red;
+            } else if (idRadioSelected == rb_Green.getId()){
+                corSelecionada = R.color.green;
+            } else if (idRadioSelected == rb_Blue.getId()){
+                corSelecionada = R.color.blue;
             }
 
             if (textoinserido.equals("")){
